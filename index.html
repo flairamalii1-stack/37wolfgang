@@ -1,0 +1,1163 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    &lt;title&gt;37WOLFGANG | Music &amp; Entertainment Management&lt;/title&gt;
+
+    &lt;meta name=&quot;description&quot; content=&quot;37WOLFGANG is a Nigerian music and entertainment management company based in Jos, Nigeria. In pursuit of freedom.&quot;&gt;
+
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#050505&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #f5f5f5;
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        <i>/* HEADER */</i>
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #222;
+        }
+
+        .nav {
+            max-width: 1300px;
+            margin: auto;
+            height: 76px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        <i>/* GENERAL */</i>
+
+        .container {
+            width: min(1200px, 90%);
+            margin: auto;
+        }
+
+        section {
+            padding: 120px 0;
+            border-bottom: 1px solid #1b1b1b;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(36px, 6vw, 72px);
+            line-height: 0.95;
+            letter-spacing: -3px;
+            margin-bottom: 35px;
+        }
+
+        .muted {
+            color: #999;
+        }
+
+        <i>/* HERO */</i>
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 150px 0 70px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #1b1b1b;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background-image:
+                linear-gradient(
+                    to top,
+                    #050505 5%,
+                    rgba(5,5,5,0.65) 50%,
+                    rgba(5,5,5,0.25)
+                ),
+                url(&quot;images/hero.jpg&quot;);
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(65px, 14vw, 180px);
+            line-height: 0.8;
+            letter-spacing: -9px;
+            font-weight: 900;
+            margin-bottom: 35px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(18px, 3vw, 28px);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            color: #aaa;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 23px;
+            border: 1px solid #444;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+            border-color: white;
+        }
+
+        .btn-primary {
+            background: white;
+            color: black;
+            border-color: white;
+        }
+
+        <i>/* ABOUT */</i>
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+        }
+
+        .about-copy {
+            font-size: 22px;
+            line-height: 1.55;
+            color: #ccc;
+        }
+
+        .about-copy p + p {
+            margin-top: 25px;
+        }
+
+        <i>/* SERVICES */</i>
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid #292929;
+        }
+
+        .service {
+            padding: 35px 25px 35px 0;
+            border-bottom: 1px solid #292929;
+        }
+
+        .service:nth-child(even) {
+            padding-left: 25px;
+            border-left: 1px solid #292929;
+        }
+
+        .service-number {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+
+        .service h3 {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #888;
+            max-width: 450px;
+        }
+
+        <i>/* RELEASES */</i>
+
+        .releases {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .release {
+            background: #0b0b0b;
+            border: 1px solid #202020;
+            transition: transform 0.3s, border 0.3s;
+        }
+
+        .release:hover {
+            transform: translateY(-5px);
+            border-color: #444;
+        }
+
+        .release-art {
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .release-info {
+            padding: 22px;
+        }
+
+        .release-info h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .release-info p {
+            color: #777;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .release-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 4px;
+        }
+
+        <i>/* ROSTER */</i>
+
+        .roster-intro {
+            max-width: 650px;
+            color: #888;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        .artist-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #0b0b0b;
+            border: 1px solid #202020;
+        }
+
+        .artist-card img {
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .artist-info {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .artist-info .role {
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            margin-bottom: 20px;
+        }
+
+        .artist-info h3 {
+            font-size: clamp(45px, 6vw, 80px);
+            letter-spacing: -4px;
+            line-height: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .artist-info p {
+            color: #999;
+            max-width: 500px;
+        }
+
+        <i>/* CONTACT */</i>
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-copy h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-copy p {
+            color: #888;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .contact-details span {
+            color: #666;
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            background: #0b0b0b;
+            border: 1px solid #292929;
+            color: white;
+            padding: 17px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #666;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        select {
+            appearance: auto;
+        }
+
+        button.submit {
+            background: white;
+            color: black;
+            border: none;
+            padding: 17px;
+            cursor: pointer;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        <i>/* FOOTER */</i>
+
+        footer {
+            padding: 60px 0;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .footer-tagline {
+            color: #666;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .socials a {
+            color: #777;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .socials a:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 60px;
+            color: #444;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        <i>/* MOBILE */</i>
+
+        @media (max-width: 800px) {
+
+            .nav {
+                height: 68px;
+                padding: 0 20px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #050505;
+                border-bottom: 1px solid #222;
+                display: none;
+                flex-direction: column;
+                padding: 25px 20px;
+                gap: 22px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            section {
+                padding: 90px 0;
+            }
+
+            .hero {
+                min-height: 90vh;
+                padding-bottom: 50px;
+            }
+
+            .hero h1 {
+                letter-spacing: -5px;
+            }
+
+            .about-grid,
+            .contact-grid,
+            .artist-card {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service:nth-child(even) {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            .releases {
+                grid-template-columns: 1fr;
+            }
+
+            .artist-card img {
+                min-height: 400px;
+                max-height: 550px;
+            }
+
+            .artist-info {
+                padding: 40px 25px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .about-copy {
+                font-size: 18px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    <i>&lt;!-- HEADER --&gt;</i>
+
+    &lt;header&gt;
+        &lt;nav class=&quot;nav&quot;&gt;
+
+            &lt;a href=&quot;#home&quot; class=&quot;logo&quot;&gt;37WOLFGANG&lt;/a&gt;
+
+            &lt;button class=&quot;menu-btn&quot; onclick=&quot;toggleMenu()&quot; aria-label=&quot;Open navigation&quot;&gt;
+                ☰
+            &lt;/button&gt;
+
+            &lt;ul class=&quot;nav-links&quot; id=&quot;navLinks&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#services&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#releases&quot;&gt;Releases&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#roster&quot;&gt;Roster&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+
+    <i>&lt;!-- HERO --&gt;</i>
+
+    &lt;main&gt;
+
+        &lt;section class=&quot;hero&quot; id=&quot;home&quot;&gt;
+
+            &lt;div class=&quot;hero-image&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+
+                &lt;div class=&quot;hero-content&quot;&gt;
+
+                    &lt;div class=&quot;eyebrow&quot;&gt;
+                        Music &amp; Entertainment Management
+                    &lt;/div&gt;
+
+                    &lt;h1&gt;37WOLFGANG&lt;/h1&gt;
+
+                    &lt;div class=&quot;hero-tagline&quot;&gt;
+                        In Pursuit of Freedom
+                    &lt;/div&gt;
+
+                    &lt;p class=&quot;hero-description&quot;&gt;
+                        A Nigerian music and entertainment management company
+                        building independent artists, records and creative
+                        careers from Jos, Nigeria.
+                    &lt;/p&gt;
+
+                    &lt;div class=&quot;buttons&quot;&gt;
+                        &lt;a href=&quot;#roster&quot; class=&quot;btn btn-primary&quot;&gt;
+                            Meet Flairr
+                        &lt;/a&gt;
+
+                        &lt;a href=&quot;#contact&quot; class=&quot;btn&quot;&gt;
+                            Work With Us
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+
+        <i>&lt;!-- ABOUT --&gt;</i>
+
+        &lt;section id=&quot;about&quot;&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+
+                &lt;div class=&quot;about-grid&quot;&gt;
+
+                    &lt;div&gt;
+                        &lt;div class=&quot;eyebrow&quot;&gt;01 / About&lt;/div&gt;
+
+                        &lt;h2&gt;
+                            Built&lt;br&gt;
+                            Independent.
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;about-copy&quot;&gt;
+
+                        &lt;p&gt;
+                            37WOLFGANG is a Nigerian record label and talent
+                            management company based in Jos, Nigeria.
+                            Founded in 2024 by artist and producer
+                            &lt;strong&gt;Flairr Amalii&lt;/strong&gt; alongside
+                            &lt;strong&gt;Smokey&lt;/strong&gt;, the company exists to
+                            support independent African sound, artists and
+                            production.
+                        &lt;/p&gt;
+
+                        &lt;p&gt;
+                            Operating within the AMALII WORLD ecosystem,
+                            37WOLFGANG works across artist development,
+                            management, recording, production and creative
+                            direction.
+                        &lt;/p&gt;
+
+                        &lt;p&gt;
+                            The objective is simple:
+                            &lt;strong&gt;build artists, build records and build
+                            freedom.&lt;/strong&gt;
+                        &lt;/p&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+
+        <i>&lt;!-- SERVICES --&gt;</i>
+
+        &lt;section id=&quot;services&quot;&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+
+                &lt;div class=&quot;eyebrow&quot;&gt;02 / Services&lt;/div&gt;
+
+                &lt;h2&gt;
+                    What We&lt;br&gt;
+                    Build.
+                &lt;/h2&gt;
+
+                &lt;div class=&quot;services-grid&quot;&gt;
+
+                    &lt;div class=&quot;service&quot;&gt;
+                        &lt;div class=&quot;service-number&quot;&gt;01&lt;/div&gt;
+                        &lt;h3&gt;Artist Development&lt;/h3&gt;
+                        &lt;p&gt;
+                            Positioning, repertoire development, creative
+                            strategy and long-term career direction for
+                            developing artists.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;service&quot;&gt;
+                        &lt;div class=&quot;service-number&quot;&gt;02&lt;/div&gt;
+                        &lt;h3&gt;Management&lt;/h3&gt;
+                        &lt;p&gt;
+                            Strategic and contract-based management designed
+                            around the artist&#39;s career, opportunities and
+                            objectives.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;service&quot;&gt;
+                        &lt;div class=&quot;service-number&quot;&gt;03&lt;/div&gt;
+                        &lt;h3&gt;Recording &amp; Production&lt;/h3&gt;
+                        &lt;p&gt;
+                            Music creation from recording and production
+                            through to song development and final execution.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;service&quot;&gt;
+                        &lt;div class=&quot;service-number&quot;&gt;04&lt;/div&gt;
+                        &lt;h3&gt;Creative Direction&lt;/h3&gt;
+                        &lt;p&gt;
+                            Visual identity, release rollouts, campaigns,
+                            content direction and creative execution.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;service&quot;&gt;
+                        &lt;div class=&quot;service-number&quot;&gt;05&lt;/div&gt;
+                        &lt;h3&gt;Music Consultancy&lt;/h3&gt;
+                        &lt;p&gt;
+                            Independent strategic guidance for artists,
+                            creatives and music businesses navigating the
+                            modern industry.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;service&quot;&gt;
+                        &lt;div class=&quot;service-number&quot;&gt;06&lt;/div&gt;
+                        &lt;h3&gt;Label Services&lt;/h3&gt;
+                        &lt;p&gt;
+                            Flexible support across music releases,
+                            strategy, creative operations and artist
+                            infrastructure.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+
+        <i>&lt;!-- RELEASES --&gt;</i>
+
+        &lt;section id=&quot;releases&quot;&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+
+                &lt;div class=&quot;eyebrow&quot;&gt;03 / Releases&lt;/div&gt;
+
+                &lt;h2&gt;
+                    From The&lt;br&gt;
+                    Wolfgang.
+                &lt;/h2&gt;
+
+                &lt;div class=&quot;releases&quot;&gt;
+
+                    &lt;article class=&quot;release&quot;&gt;
+
+                        &lt;img
+                            src=&quot;images/bullion-van.jpg&quot;
+                            alt=&quot;Bullion Van artwork&quot;
+                            class=&quot;release-art&quot;
+                        &gt;
+
+                        &lt;div class=&quot;release-info&quot;&gt;
+
+                            &lt;h3&gt;Bullion Van&lt;/h3&gt;
+
+                            &lt;p&gt;
+                                Flairr Amalii
+                            &lt;/p&gt;
+
+                            &lt;a href=&quot;#&quot; class=&quot;release-link&quot;&gt;
+                                Listen
+                            &lt;/a&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/article&gt;
+
+
+                    &lt;article class=&quot;release&quot;&gt;
+
+                        &lt;img
+                            src=&quot;images/wolftalk.jpg&quot;
+                            alt=&quot;WOLFTALK artwork&quot;
+                            class=&quot;release-art&quot;
+                        &gt;
+
+                        &lt;div class=&quot;release-info&quot;&gt;
+
+                            &lt;h3&gt;WOLFTALK&lt;/h3&gt;
+
+                            &lt;p&gt;
+                                Flairr Amalii
+                            &lt;/p&gt;
+
+                            &lt;a href=&quot;#&quot; class=&quot;release-link&quot;&gt;
+                                Listen
+                            &lt;/a&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/article&gt;
+
+
+                    &lt;article class=&quot;release&quot;&gt;
+
+                        &lt;img
+                            src=&quot;images/crusader.jpg&quot;
+                            alt=&quot;CRUSADER artwork&quot;
+                            class=&quot;release-art&quot;
+                        &gt;
+
+                        &lt;div class=&quot;release-info&quot;&gt;
+
+                            &lt;h3&gt;CRUSADER&lt;/h3&gt;
+
+                            &lt;p&gt;
+                                Flairr Amalii
+                            &lt;/p&gt;
+
+                            &lt;a href=&quot;#&quot; class=&quot;release-link&quot;&gt;
+                                Listen
+                            &lt;/a&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/article&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+
+        <i>&lt;!-- ROSTER --&gt;</i>
+
+        &lt;section id=&quot;roster&quot;&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+
+                &lt;div class=&quot;eyebrow&quot;&gt;04 / Roster&lt;/div&gt;
+
+                &lt;h2&gt;
+                    The&lt;br&gt;
+                    Artist.
+                &lt;/h2&gt;
+
+                &lt;p class=&quot;roster-intro&quot;&gt;
+                    37WOLFGANG is building a roster of distinctive artists
+                    with long-term vision. For now, the roster begins with
+                    one.
+                &lt;/p&gt;
+
+                &lt;div class=&quot;artist-card&quot;&gt;
+
+                    &lt;img
+                        src=&quot;images/flairr.jpg&quot;
+                        alt=&quot;Flairr Amalii&quot;
+                    &gt;
+
+                    &lt;div class=&quot;artist-info&quot;&gt;
+
+                        &lt;div class=&quot;role&quot;&gt;
+                            CEO / Recording Artist / Producer
+                        &lt;/div&gt;
+
+                        &lt;h3&gt;
+                            Flairr&lt;br&gt;
+                            Amalii
+                        &lt;/h3&gt;
+
+                        &lt;p&gt;
+                            Self-taught music producer, recording artist and
+                            label executive from Jos, Nigeria. Flairr is the
+                            co-founder of 37WOLFGANG and the creative force
+                            behind the company&#39;s current roster.
+                        &lt;/p&gt;
+
+                        &lt;div class=&quot;buttons&quot; style=&quot;margin-top: 30px;&quot;&gt;
+
+                            &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
+                                Spotify
+                            &lt;/a&gt;
+
+                            &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
+                                Instagram
+                            &lt;/a&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+
+        <i>&lt;!-- CONTACT --&gt;</i>
+
+        &lt;section id=&quot;contact&quot;&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+
+                &lt;div class=&quot;contact-grid&quot;&gt;
+
+                    &lt;div class=&quot;contact-copy&quot;&gt;
+
+                        &lt;div class=&quot;eyebrow&quot;&gt;
+                            05 / Contact
+                        &lt;/div&gt;
+
+                        &lt;h2&gt;
+                            Let&#39;s&lt;br&gt;
+                            Work.
+                        &lt;/h2&gt;
+
+                        &lt;p&gt;
+                            For management, recording, consultancy, creative
+                            direction, collaborations and business enquiries,
+                            reach out directly.
+                        &lt;/p&gt;
+
+                        &lt;div class=&quot;contact-details&quot;&gt;
+
+                            &lt;div&gt;
+                                &lt;span&gt;Email&lt;/span&gt;
+                                &lt;a href=&quot;mailto:37wolfgangmusic@gmail.com&quot;&gt;
+                                    37wolfgangmusic@gmail.com
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+
+                            &lt;br&gt;
+
+                            &lt;div&gt;
+                                &lt;span&gt;Phone&lt;/span&gt;
+                                &lt;a href=&quot;tel:+2347062860006&quot;&gt;
+                                    +234 706 286 0006
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+
+                            &lt;br&gt;
+
+                            &lt;div&gt;
+                                &lt;span&gt;Based In&lt;/span&gt;
+                                Jos, Nigeria
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+
+                    &lt;form
+                        action=&quot;mailto:37wolfgangmusic@gmail.com&quot;
+                        method=&quot;post&quot;
+                        enctype=&quot;text/plain&quot;
+                    &gt;
+
+                        &lt;input
+                            type=&quot;text&quot;
+                            name=&quot;name&quot;
+                            placeholder=&quot;Name / Artist Name&quot;
+                            required
+                        &gt;
+
+                        &lt;input
+                            type=&quot;email&quot;
+                            name=&quot;email&quot;
+                            placeholder=&quot;Email&quot;
+                            required
+                        &gt;
+
+                        &lt;select name=&quot;enquiry&quot;&gt;
+
+                            &lt;option value=&quot;&quot;&gt;
+                                What are you contacting us about?
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Management
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Recording
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Consultancy
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Creative Direction
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Artist Submission
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Collaboration
+                            &lt;/option&gt;
+
+                            &lt;option&gt;
+                                Other
+                            &lt;/option&gt;
+
+                        &lt;/select&gt;
+
+                        &lt;input
+                            type=&quot;url&quot;
+                            name=&quot;link&quot;
+                            placeholder=&quot;Demo / Portfolio / Social Link&quot;
+                        &gt;
+
+                        &lt;textarea
+                            name=&quot;message&quot;
+                            placeholder=&quot;Tell us what you&#39;re working on...&quot;
+                        &gt;&lt;/textarea&gt;
+
+                        &lt;button
+                            type=&quot;submit&quot;
+                            class=&quot;submit&quot;
+                        &gt;
+                            Send Enquiry
+                        &lt;/button&gt;
+
+                    &lt;/form&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+    &lt;/main&gt;
+
+
+    <i>&lt;!-- FOOTER --&gt;</i>
+
+    &lt;footer&gt;
+
+        &lt;div class=&quot;container&quot;&gt;
+
+            &lt;div class=&quot;footer-top&quot;&gt;
+
+                &lt;div&gt;
+
+                    &lt;div class=&quot;footer-logo&quot;&gt;
+                        37WOLFGANG
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;footer-tagline&quot;&gt;
+                        In Pursuit of Freedom
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class=&quot;socials&quot;&gt;
+
+                    <i>&lt;!-- Add your real social links later --&gt;</i>
+
+                    &lt;a href=&quot;#&quot;&gt;
+                        Instagram
+                    &lt;/a&gt;
+
+                    &lt;a href=&quot;#&quot;&gt;
+                        TikTok
+                    &lt;/a&gt;
+
+                    &lt;a href=&quot;#&quot;&gt;
+                        YouTube
+                    &lt;/a&gt;
+
+                    &lt;a href=&quot;#&quot;&gt;
+                        Spotify
+                    &lt;/a&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class=&quot;copyright&quot;&gt;
+                © 2026 37WOLFGANG. All Rights Reserved.
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/footer&gt;
+
+
+    &lt;script&gt;
+
+        function toggleMenu() {
+
+            const nav = document.getElementById(&quot;navLinks&quot;);
+
+            nav.classList.toggle(&quot;active&quot;);
+
+        }
+
+        document.querySelectorAll(&quot;.nav-links a&quot;).forEach(link =&gt; {
+
+            link.addEventListener(&quot;click&quot;, () =&gt; {
+
+                document
+                    .getElementById(&quot;navLinks&quot;)
+                    .classList.remove(&quot;active&quot;);
+
+            });
+
+        });
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</body>
+</html>
