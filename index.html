@@ -1,22 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    <title>37WOLFGANG | Music & Entertainment Management</title>
 
-    &lt;title&gt;37WOLFGANG | Music &amp; Entertainment Management&lt;/title&gt;
+    <meta name="description" content="37WOLFGANG is a Nigerian music and entertainment management company based in Jos, Nigeria. In pursuit of freedom.">
 
-    &lt;meta name=&quot;description&quot; content=&quot;37WOLFGANG is a Nigerian music and entertainment management company based in Jos, Nigeria. In pursuit of freedom.&quot;&gt;
+    <meta name="theme-color" content="#050505">
 
-    &lt;meta name=&quot;theme-color&quot; content=&quot;#050505&quot;&gt;
-
-    &lt;style&gt;
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -43,8 +37,6 @@
             width: 100%;
             display: block;
         }
-
-        <i>/* HEADER */</i>
 
         header {
             position: fixed;
@@ -100,8 +92,6 @@
             cursor: pointer;
         }
 
-        <i>/* GENERAL */</i>
-
         .container {
             width: min(1200px, 90%);
             margin: auto;
@@ -127,11 +117,7 @@
             margin-bottom: 35px;
         }
 
-        .muted {
-            color: #999;
-        }
-
-        <i>/* HERO */</i>
+        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -147,6 +133,7 @@
             position: absolute;
             inset: 0;
             z-index: -2;
+
             background-image:
                 linear-gradient(
                     to top,
@@ -154,7 +141,7 @@
                     rgba(5,5,5,0.65) 50%,
                     rgba(5,5,5,0.25)
                 ),
-                url(&quot;images/hero.jpg&quot;);
+                url("hero.jpg");
 
             background-size: cover;
             background-position: center;
@@ -214,7 +201,7 @@
             border-color: white;
         }
 
-        <i>/* ABOUT */</i>
+        /* ABOUT */
 
         .about-grid {
             display: grid;
@@ -232,7 +219,7 @@
             margin-top: 25px;
         }
 
-        <i>/* SERVICES */</i>
+        /* SERVICES */
 
         .services-grid {
             display: grid;
@@ -266,7 +253,7 @@
             max-width: 450px;
         }
 
-        <i>/* RELEASES */</i>
+        /* RELEASES */
 
         .releases {
             display: grid;
@@ -316,7 +303,7 @@
             padding-bottom: 4px;
         }
 
-        <i>/* ROSTER */</i>
+        /* ROSTER */
 
         .roster-intro {
             max-width: 650px;
@@ -365,7 +352,7 @@
             max-width: 500px;
         }
 
-        <i>/* CONTACT */</i>
+        /* CONTACT */
 
         .contact-grid {
             display: grid;
@@ -442,7 +429,7 @@
             font-weight: bold;
         }
 
-        <i>/* FOOTER */</i>
+        /* FOOTER */
 
         footer {
             padding: 60px 0;
@@ -494,7 +481,7 @@
             letter-spacing: 1px;
         }
 
-        <i>/* MOBILE */</i>
+        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -574,590 +561,538 @@
                 font-size: 18px;
             }
         }
-    &lt;/style&gt;
-&lt;/head&gt;
+    </style>
+</head>
 
-&lt;body&gt;
+<body>
 
-    <i>&lt;!-- HEADER --&gt;</i>
+    <!-- HEADER -->
 
-    &lt;header&gt;
-        &lt;nav class=&quot;nav&quot;&gt;
+    <header>
+        <nav class="nav">
 
-            &lt;a href=&quot;#home&quot; class=&quot;logo&quot;&gt;37WOLFGANG&lt;/a&gt;
+            <a href="#home" class="logo">37WOLFGANG</a>
 
-            &lt;button class=&quot;menu-btn&quot; onclick=&quot;toggleMenu()&quot; aria-label=&quot;Open navigation&quot;&gt;
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation">
                 ☰
-            &lt;/button&gt;
+            </button>
 
-            &lt;ul class=&quot;nav-links&quot; id=&quot;navLinks&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#services&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#releases&quot;&gt;Releases&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#roster&quot;&gt;Roster&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#releases">Releases</a></li>
+                <li><a href="#roster">Roster</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        &lt;/nav&gt;
-    &lt;/header&gt;
+        </nav>
+    </header>
 
 
-    <i>&lt;!-- HERO --&gt;</i>
+    <!-- HERO -->
 
-    &lt;main&gt;
+    <main>
 
-        &lt;section class=&quot;hero&quot; id=&quot;home&quot;&gt;
+        <section class="hero" id="home">
 
-            &lt;div class=&quot;hero-image&quot;&gt;&lt;/div&gt;
+            <div class="hero-image"></div>
 
-            &lt;div class=&quot;container&quot;&gt;
+            <div class="container">
 
-                &lt;div class=&quot;hero-content&quot;&gt;
+                <div class="hero-content">
 
-                    &lt;div class=&quot;eyebrow&quot;&gt;
-                        Music &amp; Entertainment Management
-                    &lt;/div&gt;
+                    <div class="eyebrow">
+                        Music & Entertainment Management
+                    </div>
 
-                    &lt;h1&gt;37WOLFGANG&lt;/h1&gt;
+                    <h1>37WOLFGANG</h1>
 
-                    &lt;div class=&quot;hero-tagline&quot;&gt;
+                    <div class="hero-tagline">
                         In Pursuit of Freedom
-                    &lt;/div&gt;
+                    </div>
 
-                    &lt;p class=&quot;hero-description&quot;&gt;
+                    <p class="hero-description">
                         A Nigerian music and entertainment management company
                         building independent artists, records and creative
                         careers from Jos, Nigeria.
-                    &lt;/p&gt;
+                    </p>
 
-                    &lt;div class=&quot;buttons&quot;&gt;
-                        &lt;a href=&quot;#roster&quot; class=&quot;btn btn-primary&quot;&gt;
+                    <div class="buttons">
+                        <a href="#roster" class="btn btn-primary">
                             Meet Flairr
-                        &lt;/a&gt;
+                        </a>
 
-                        &lt;a href=&quot;#contact&quot; class=&quot;btn&quot;&gt;
+                        <a href="#contact" class="btn">
                             Work With Us
-                        &lt;/a&gt;
-                    &lt;/div&gt;
+                        </a>
+                    </div>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/section&gt;
+        </section>
 
 
-        <i>&lt;!-- ABOUT --&gt;</i>
+        <!-- ABOUT -->
 
-        &lt;section id=&quot;about&quot;&gt;
+        <section id="about">
 
-            &lt;div class=&quot;container&quot;&gt;
+            <div class="container">
 
-                &lt;div class=&quot;about-grid&quot;&gt;
+                <div class="about-grid">
 
-                    &lt;div&gt;
-                        &lt;div class=&quot;eyebrow&quot;&gt;01 / About&lt;/div&gt;
+                    <div>
+                        <div class="eyebrow">01 / About</div>
 
-                        &lt;h2&gt;
-                            Built&lt;br&gt;
+                        <h2>
+                            Built<br>
                             Independent.
-                        &lt;/h2&gt;
-                    &lt;/div&gt;
+                        </h2>
+                    </div>
 
-                    &lt;div class=&quot;about-copy&quot;&gt;
+                    <div class="about-copy">
 
-                        &lt;p&gt;
+                        <p>
                             37WOLFGANG is a Nigerian record label and talent
                             management company based in Jos, Nigeria.
                             Founded in 2024 by artist and producer
-                            &lt;strong&gt;Flairr Amalii&lt;/strong&gt; alongside
-                            &lt;strong&gt;Smokey&lt;/strong&gt;, the company exists to
+                            <strong>Flairr Amalii</strong> alongside
+                            <strong>Smokey</strong>, the company exists to
                             support independent African sound, artists and
                             production.
-                        &lt;/p&gt;
+                        </p>
 
-                        &lt;p&gt;
+                        <p>
                             Operating within the AMALII WORLD ecosystem,
                             37WOLFGANG works across artist development,
                             management, recording, production and creative
                             direction.
-                        &lt;/p&gt;
+                        </p>
 
-                        &lt;p&gt;
+                        <p>
                             The objective is simple:
-                            &lt;strong&gt;build artists, build records and build
-                            freedom.&lt;/strong&gt;
-                        &lt;/p&gt;
+                            <strong>build artists, build records and build
+                            freedom.</strong>
+                        </p>
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/section&gt;
+        </section>
 
 
-        <i>&lt;!-- SERVICES --&gt;</i>
+        <!-- SERVICES -->
 
-        &lt;section id=&quot;services&quot;&gt;
+        <section id="services">
 
-            &lt;div class=&quot;container&quot;&gt;
+            <div class="container">
 
-                &lt;div class=&quot;eyebrow&quot;&gt;02 / Services&lt;/div&gt;
+                <div class="eyebrow">02 / Services</div>
 
-                &lt;h2&gt;
-                    What We&lt;br&gt;
+                <h2>
+                    What We<br>
                     Build.
-                &lt;/h2&gt;
+                </h2>
 
-                &lt;div class=&quot;services-grid&quot;&gt;
+                <div class="services-grid">
 
-                    &lt;div class=&quot;service&quot;&gt;
-                        &lt;div class=&quot;service-number&quot;&gt;01&lt;/div&gt;
-                        &lt;h3&gt;Artist Development&lt;/h3&gt;
-                        &lt;p&gt;
+                    <div class="service">
+                        <div class="service-number">01</div>
+                        <h3>Artist Development</h3>
+                        <p>
                             Positioning, repertoire development, creative
                             strategy and long-term career direction for
                             developing artists.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
+                        </p>
+                    </div>
 
-                    &lt;div class=&quot;service&quot;&gt;
-                        &lt;div class=&quot;service-number&quot;&gt;02&lt;/div&gt;
-                        &lt;h3&gt;Management&lt;/h3&gt;
-                        &lt;p&gt;
+                    <div class="service">
+                        <div class="service-number">02</div>
+                        <h3>Management</h3>
+                        <p>
                             Strategic and contract-based management designed
-                            around the artist&#39;s career, opportunities and
+                            around the artist's career, opportunities and
                             objectives.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
+                        </p>
+                    </div>
 
-                    &lt;div class=&quot;service&quot;&gt;
-                        &lt;div class=&quot;service-number&quot;&gt;03&lt;/div&gt;
-                        &lt;h3&gt;Recording &amp; Production&lt;/h3&gt;
-                        &lt;p&gt;
+                    <div class="service">
+                        <div class="service-number">03</div>
+                        <h3>Recording & Production</h3>
+                        <p>
                             Music creation from recording and production
                             through to song development and final execution.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
+                        </p>
+                    </div>
 
-                    &lt;div class=&quot;service&quot;&gt;
-                        &lt;div class=&quot;service-number&quot;&gt;04&lt;/div&gt;
-                        &lt;h3&gt;Creative Direction&lt;/h3&gt;
-                        &lt;p&gt;
+                    <div class="service">
+                        <div class="service-number">04</div>
+                        <h3>Creative Direction</h3>
+                        <p>
                             Visual identity, release rollouts, campaigns,
                             content direction and creative execution.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
+                        </p>
+                    </div>
 
-                    &lt;div class=&quot;service&quot;&gt;
-                        &lt;div class=&quot;service-number&quot;&gt;05&lt;/div&gt;
-                        &lt;h3&gt;Music Consultancy&lt;/h3&gt;
-                        &lt;p&gt;
+                    <div class="service">
+                        <div class="service-number">05</div>
+                        <h3>Music Consultancy</h3>
+                        <p>
                             Independent strategic guidance for artists,
                             creatives and music businesses navigating the
                             modern industry.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
+                        </p>
+                    </div>
 
-                    &lt;div class=&quot;service&quot;&gt;
-                        &lt;div class=&quot;service-number&quot;&gt;06&lt;/div&gt;
-                        &lt;h3&gt;Label Services&lt;/h3&gt;
-                        &lt;p&gt;
+                    <div class="service">
+                        <div class="service-number">06</div>
+                        <h3>Label Services</h3>
+                        <p>
                             Flexible support across music releases,
                             strategy, creative operations and artist
                             infrastructure.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
+                        </p>
+                    </div>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/section&gt;
+        </section>
 
 
-        <i>&lt;!-- RELEASES --&gt;</i>
+        <!-- RELEASES -->
 
-        &lt;section id=&quot;releases&quot;&gt;
+        <section id="releases">
 
-            &lt;div class=&quot;container&quot;&gt;
+            <div class="container">
 
-                &lt;div class=&quot;eyebrow&quot;&gt;03 / Releases&lt;/div&gt;
+                <div class="eyebrow">03 / Releases</div>
 
-                &lt;h2&gt;
-                    From The&lt;br&gt;
+                <h2>
+                    From The<br>
                     Wolfgang.
-                &lt;/h2&gt;
+                </h2>
 
-                &lt;div class=&quot;releases&quot;&gt;
+                <div class="releases">
 
-                    &lt;article class=&quot;release&quot;&gt;
+                    <article class="release">
 
-                        &lt;img
-                            src=&quot;images/bullion-van.jpg&quot;
-                            alt=&quot;Bullion Van artwork&quot;
-                            class=&quot;release-art&quot;
-                        &gt;
+                        <img
+                            src="bullion-van.jpg"
+                            alt="Bullion Van artwork"
+                            class="release-art"
+                        >
 
-                        &lt;div class=&quot;release-info&quot;&gt;
+                        <div class="release-info">
 
-                            &lt;h3&gt;Bullion Van&lt;/h3&gt;
+                            <h3>Bullion Van</h3>
 
-                            &lt;p&gt;
-                                Flairr Amalii
-                            &lt;/p&gt;
+                            <p>Flairr Amalii</p>
 
-                            &lt;a href=&quot;#&quot; class=&quot;release-link&quot;&gt;
+                            <a href="#" class="release-link">
                                 Listen
-                            &lt;/a&gt;
+                            </a>
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/article&gt;
+                    </article>
 
 
-                    &lt;article class=&quot;release&quot;&gt;
+                    <article class="release">
 
-                        &lt;img
-                            src=&quot;images/wolftalk.jpg&quot;
-                            alt=&quot;WOLFTALK artwork&quot;
-                            class=&quot;release-art&quot;
-                        &gt;
+                        <img
+                            src="wolftalk.jpg"
+                            alt="WOLFTALK artwork"
+                            class="release-art"
+                        >
 
-                        &lt;div class=&quot;release-info&quot;&gt;
+                        <div class="release-info">
 
-                            &lt;h3&gt;WOLFTALK&lt;/h3&gt;
+                            <h3>WOLFTALK</h3>
 
-                            &lt;p&gt;
-                                Flairr Amalii
-                            &lt;/p&gt;
+                            <p>Flairr Amalii</p>
 
-                            &lt;a href=&quot;#&quot; class=&quot;release-link&quot;&gt;
+                            <a href="#" class="release-link">
                                 Listen
-                            &lt;/a&gt;
+                            </a>
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/article&gt;
+                    </article>
 
 
-                    &lt;article class=&quot;release&quot;&gt;
+                    <article class="release">
 
-                        &lt;img
-                            src=&quot;images/crusader.jpg&quot;
-                            alt=&quot;CRUSADER artwork&quot;
-                            class=&quot;release-art&quot;
-                        &gt;
+                        <img
+                            src="crusader.jpg"
+                            alt="CRUSADER artwork"
+                            class="release-art"
+                        >
 
-                        &lt;div class=&quot;release-info&quot;&gt;
+                        <div class="release-info">
 
-                            &lt;h3&gt;CRUSADER&lt;/h3&gt;
+                            <h3>CRUSADER</h3>
 
-                            &lt;p&gt;
-                                Flairr Amalii
-                            &lt;/p&gt;
+                            <p>Flairr Amalii</p>
 
-                            &lt;a href=&quot;#&quot; class=&quot;release-link&quot;&gt;
+                            <a href="#" class="release-link">
                                 Listen
-                            &lt;/a&gt;
+                            </a>
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/article&gt;
+                    </article>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/section&gt;
+        </section>
 
 
-        <i>&lt;!-- ROSTER --&gt;</i>
+        <!-- ROSTER -->
 
-        &lt;section id=&quot;roster&quot;&gt;
+        <section id="roster">
 
-            &lt;div class=&quot;container&quot;&gt;
+            <div class="container">
 
-                &lt;div class=&quot;eyebrow&quot;&gt;04 / Roster&lt;/div&gt;
+                <div class="eyebrow">04 / Roster</div>
 
-                &lt;h2&gt;
-                    The&lt;br&gt;
+                <h2>
+                    The<br>
                     Artist.
-                &lt;/h2&gt;
+                </h2>
 
-                &lt;p class=&quot;roster-intro&quot;&gt;
+                <p class="roster-intro">
                     37WOLFGANG is building a roster of distinctive artists
                     with long-term vision. For now, the roster begins with
                     one.
-                &lt;/p&gt;
+                </p>
 
-                &lt;div class=&quot;artist-card&quot;&gt;
+                <div class="artist-card">
 
-                    &lt;img
-                        src=&quot;images/flairr.jpg&quot;
-                        alt=&quot;Flairr Amalii&quot;
-                    &gt;
+                    <img
+                        src="flairr.jpg"
+                        alt="Flairr Amalii"
+                    >
 
-                    &lt;div class=&quot;artist-info&quot;&gt;
+                    <div class="artist-info">
 
-                        &lt;div class=&quot;role&quot;&gt;
+                        <div class="role">
                             CEO / Recording Artist / Producer
-                        &lt;/div&gt;
+                        </div>
 
-                        &lt;h3&gt;
-                            Flairr&lt;br&gt;
+                        <h3>
+                            Flairr<br>
                             Amalii
-                        &lt;/h3&gt;
+                        </h3>
 
-                        &lt;p&gt;
+                        <p>
                             Self-taught music producer, recording artist and
                             label executive from Jos, Nigeria. Flairr is the
                             co-founder of 37WOLFGANG and the creative force
-                            behind the company&#39;s current roster.
-                        &lt;/p&gt;
+                            behind the company's current roster.
+                        </p>
 
-                        &lt;div class=&quot;buttons&quot; style=&quot;margin-top: 30px;&quot;&gt;
+                    </div>
 
-                            &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
-                                Spotify
-                            &lt;/a&gt;
+                </div>
 
-                            &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
-                                Instagram
-                            &lt;/a&gt;
+            </div>
 
-                        &lt;/div&gt;
-
-                    &lt;/div&gt;
-
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-
-        &lt;/section&gt;
+        </section>
 
 
-        <i>&lt;!-- CONTACT --&gt;</i>
+        <!-- CONTACT -->
 
-        &lt;section id=&quot;contact&quot;&gt;
+        <section id="contact">
 
-            &lt;div class=&quot;container&quot;&gt;
+            <div class="container">
 
-                &lt;div class=&quot;contact-grid&quot;&gt;
+                <div class="contact-grid">
 
-                    &lt;div class=&quot;contact-copy&quot;&gt;
+                    <div class="contact-copy">
 
-                        &lt;div class=&quot;eyebrow&quot;&gt;
+                        <div class="eyebrow">
                             05 / Contact
-                        &lt;/div&gt;
+                        </div>
 
-                        &lt;h2&gt;
-                            Let&#39;s&lt;br&gt;
+                        <h2>
+                            Let's<br>
                             Work.
-                        &lt;/h2&gt;
+                        </h2>
 
-                        &lt;p&gt;
+                        <p>
                             For management, recording, consultancy, creative
                             direction, collaborations and business enquiries,
                             reach out directly.
-                        &lt;/p&gt;
+                        </p>
 
-                        &lt;div class=&quot;contact-details&quot;&gt;
+                        <div class="contact-details">
 
-                            &lt;div&gt;
-                                &lt;span&gt;Email&lt;/span&gt;
-                                &lt;a href=&quot;mailto:37wolfgangmusic@gmail.com&quot;&gt;
+                            <div>
+                                <span>Email</span>
+
+                                <a href="mailto:37wolfgangmusic@gmail.com">
                                     37wolfgangmusic@gmail.com
-                                &lt;/a&gt;
-                            &lt;/div&gt;
+                                </a>
+                            </div>
 
-                            &lt;br&gt;
+                            <br>
 
-                            &lt;div&gt;
-                                &lt;span&gt;Phone&lt;/span&gt;
-                                &lt;a href=&quot;tel:+2347062860006&quot;&gt;
+                            <div>
+                                <span>Phone</span>
+
+                                <a href="tel:+2347062860006">
                                     +234 706 286 0006
-                                &lt;/a&gt;
-                            &lt;/div&gt;
+                                </a>
+                            </div>
 
-                            &lt;br&gt;
+                            <br>
 
-                            &lt;div&gt;
-                                &lt;span&gt;Based In&lt;/span&gt;
+                            <div>
+                                <span>Based In</span>
                                 Jos, Nigeria
-                            &lt;/div&gt;
+                            </div>
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/div&gt;
+                    </div>
 
 
-                    &lt;form
-                        action=&quot;mailto:37wolfgangmusic@gmail.com&quot;
-                        method=&quot;post&quot;
-                        enctype=&quot;text/plain&quot;
-                    &gt;
+                    <form
+                        action="mailto:37wolfgangmusic@gmail.com"
+                        method="post"
+                        enctype="text/plain"
+                    >
 
-                        &lt;input
-                            type=&quot;text&quot;
-                            name=&quot;name&quot;
-                            placeholder=&quot;Name / Artist Name&quot;
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name / Artist Name"
                             required
-                        &gt;
+                        >
 
-                        &lt;input
-                            type=&quot;email&quot;
-                            name=&quot;email&quot;
-                            placeholder=&quot;Email&quot;
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
                             required
-                        &gt;
+                        >
 
-                        &lt;select name=&quot;enquiry&quot;&gt;
+                        <select name="enquiry">
 
-                            &lt;option value=&quot;&quot;&gt;
+                            <option value="">
                                 What are you contacting us about?
-                            &lt;/option&gt;
+                            </option>
 
-                            &lt;option&gt;
-                                Management
-                            &lt;/option&gt;
+                            <option>Management</option>
+                            <option>Recording</option>
+                            <option>Consultancy</option>
+                            <option>Creative Direction</option>
+                            <option>Artist Submission</option>
+                            <option>Collaboration</option>
+                            <option>Other</option>
 
-                            &lt;option&gt;
-                                Recording
-                            &lt;/option&gt;
+                        </select>
 
-                            &lt;option&gt;
-                                Consultancy
-                            &lt;/option&gt;
+                        <input
+                            type="url"
+                            name="link"
+                            placeholder="Demo / Portfolio / Social Link"
+                        >
 
-                            &lt;option&gt;
-                                Creative Direction
-                            &lt;/option&gt;
+                        <textarea
+                            name="message"
+                            placeholder="Tell us what you're working on..."
+                        ></textarea>
 
-                            &lt;option&gt;
-                                Artist Submission
-                            &lt;/option&gt;
-
-                            &lt;option&gt;
-                                Collaboration
-                            &lt;/option&gt;
-
-                            &lt;option&gt;
-                                Other
-                            &lt;/option&gt;
-
-                        &lt;/select&gt;
-
-                        &lt;input
-                            type=&quot;url&quot;
-                            name=&quot;link&quot;
-                            placeholder=&quot;Demo / Portfolio / Social Link&quot;
-                        &gt;
-
-                        &lt;textarea
-                            name=&quot;message&quot;
-                            placeholder=&quot;Tell us what you&#39;re working on...&quot;
-                        &gt;&lt;/textarea&gt;
-
-                        &lt;button
-                            type=&quot;submit&quot;
-                            class=&quot;submit&quot;
-                        &gt;
+                        <button
+                            type="submit"
+                            class="submit"
+                        >
                             Send Enquiry
-                        &lt;/button&gt;
+                        </button>
 
-                    &lt;/form&gt;
+                    </form>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/section&gt;
+        </section>
 
-    &lt;/main&gt;
+    </main>
 
 
-    <i>&lt;!-- FOOTER --&gt;</i>
+    <!-- FOOTER -->
 
-    &lt;footer&gt;
+    <footer>
 
-        &lt;div class=&quot;container&quot;&gt;
+        <div class="container">
 
-            &lt;div class=&quot;footer-top&quot;&gt;
+            <div class="footer-top">
 
-                &lt;div&gt;
+                <div>
 
-                    &lt;div class=&quot;footer-logo&quot;&gt;
+                    <div class="footer-logo">
                         37WOLFGANG
-                    &lt;/div&gt;
+                    </div>
 
-                    &lt;div class=&quot;footer-tagline&quot;&gt;
+                    <div class="footer-tagline">
                         In Pursuit of Freedom
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;
+                </div>
 
-                &lt;div class=&quot;socials&quot;&gt;
+                <div class="socials">
 
-                    <i>&lt;!-- Add your real social links later --&gt;</i>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Spotify</a>
 
-                    &lt;a href=&quot;#&quot;&gt;
-                        Instagram
-                    &lt;/a&gt;
+                </div>
 
-                    &lt;a href=&quot;#&quot;&gt;
-                        TikTok
-                    &lt;/a&gt;
+            </div>
 
-                    &lt;a href=&quot;#&quot;&gt;
-                        YouTube
-                    &lt;/a&gt;
-
-                    &lt;a href=&quot;#&quot;&gt;
-                        Spotify
-                    &lt;/a&gt;
-
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-
-            &lt;div class=&quot;copyright&quot;&gt;
+            <div class="copyright">
                 © 2026 37WOLFGANG. All Rights Reserved.
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/footer&gt;
+    </footer>
 
 
-    &lt;script&gt;
+    <script>
 
         function toggleMenu() {
 
-            const nav = document.getElementById(&quot;navLinks&quot;);
+            const nav = document.getElementById("navLinks");
 
-            nav.classList.toggle(&quot;active&quot;);
+            nav.classList.toggle("active");
 
         }
 
-        document.querySelectorAll(&quot;.nav-links a&quot;).forEach(link =&gt; {
+        document.querySelectorAll(".nav-links a").forEach(link => {
 
-            link.addEventListener(&quot;click&quot;, () =&gt; {
+            link.addEventListener("click", () => {
 
                 document
-                    .getElementById(&quot;navLinks&quot;)
-                    .classList.remove(&quot;active&quot;);
+                    .getElementById("navLinks")
+                    .classList.remove("active");
 
             });
 
         });
 
-    &lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    </script>
 
 </body>
 </html>
